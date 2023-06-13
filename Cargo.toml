@@ -1,0 +1,33 @@
+[package]
+name = "mq-http-rust-sdk"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[example]]
+name = "consumer"
+path = "examples/consumer.rs"
+
+[[example]]
+name = "producer"
+path = "examples/producer.rs"
+
+[dependencies]
+log = "0.4.17"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.26.0", features = ["net", "fs", "macros", "sync", "rt-multi-thread", "time"] }
+anyhow = "1.0.69"
+thiserror = "1.0.39"
+serde_json = "1.0.94"
+serde = { version = "1.0.160", features = ["derive"] }
+quick-xml = { version = "0.28.2", features = ["serialize"] }
+xml-rs = "0.8"
+serde_urlencoded = "0.7.1"
+sha1 = "0.10.5"
+base64 = "0.21.0"
+hmac = "0.12.1"
+regex = "1.8.1"
+chrono = "0.4.24"
+md5 = "0.7.0"
+url = "2.3.1"
